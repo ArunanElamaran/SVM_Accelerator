@@ -1,0 +1,13 @@
+filename,kernel,kernel_time_us,cpu_time_us,achieved_occupancy,ipc,sm_efficiency,dram_read_throughput,stall_memory_dependency,flop_count_sp,dram_utilization,gld_efficiency
+svm2_THREAD_SVM_NUM_SV_16.txt,svm_inference_thread_parallel_kernel,615.29,5983890.0,0.958741,3.156558,99.2,122.37,16.25,1130000000.0,(4),46.02
+svm2_BLOCK_SVM_NUM_SV_16.txt,svm_inference_batched_kernel,34166.0,5981620.0,0.893734,3.026316,99.98,2.5962,2.48,3520000000.0,(1),58.93
+svm2_BLOCK_BLOCK_SIZE_32.txt,svm_inference_batched_kernel,17905.0,5982040.0,0.155834,0.983662,78.59,4.609,31.54,1280000000.0,(1),58.93
+svm2_THREAD_SVM_NUM_SV_32.txt,svm_inference_thread_parallel_kernel,1197.1000000000001,11466900.0,0.968958,3.128611,99.49,62.767,14.14,2250000000.0,(2),46.02
+svm2_BLOCK_SVM_NUM_SV_32.txt,svm_inference_batched_kernel,30701.0,11482700.0,0.893398,3.03204,99.98,2.6176,2.5,4480000000.0,(1),62.5
+svm2_THREAD_THREAD_BLOCK_SIZE_32.txt,svm_inference_thread_parallel_kernel,685.56,5980710.0,0.481904,3.016736,99.28,111.49,29.6,1130000000.0,(3),46.58
+svm2_THREAD_THREAD_BLOCK_SIZE_64.txt,svm_inference_thread_parallel_kernel,618.94,5982540.0,0.957232,3.186701,99.13,121.72,16.02,1130000000.0,(4),46.21
+svm2_BLOCK_BLOCK_SIZE_64.txt,svm_inference_batched_kernel,16172.999999999998,6021570.0,0.352449,1.541846,86.83,4.6096,12.82,1600000000.0,(1),58.93
+svm2_BLOCK_BLOCK_SIZE_128.txt,svm_inference_batched_kernel,16170.000000000002,6030590.0,0.651669,2.59695,99.97,4.5753,6.63,2240000000.0,(1),58.93
+svm2_THREAD_THREAD_BLOCK_SIZE_128.txt,svm_inference_thread_parallel_kernel,611.19,5982860.0,0.95816,3.163479,99.21,122.33,16.17,1130000000.0,(4),46.02
+svm2_BLOCK_BLOCK_SIZE_256.txt,svm_inference_batched_kernel,30755.0,5983660.0,0.893782,3.026883,99.98,2.6009,2.49,3520000000.0,(1),58.93
+svm2_THREAD_THREAD_BLOCK_SIZE_256.txt,svm_inference_thread_parallel_kernel,615.99,5977830.0,0.954382,3.13744,99.19,122.31,16.17,1130000000.0,(4),45.93

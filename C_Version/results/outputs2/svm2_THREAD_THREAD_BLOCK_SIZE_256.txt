@@ -1,0 +1,45 @@
+==== NVPROF BASIC ======
+3177503== NVPROF is profiling process 3177503, command: ./svm2
+Batched CPU elapsed (sec): 5.97783
+GPU THREAD elapsed (sec): 0.001885
+All outputs match across all implementations!
+==3177503== Profiling application: ./svm2
+==3177503== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   53.93%  50.549ms         1  50.549ms  50.549ms  50.549ms  [CUDA memcpy DtoH]
+                   45.41%  42.570ms         4  10.642ms     736ns  42.567ms  [CUDA memcpy HtoD]
+                    0.66%  615.99us         1  615.99us  615.99us  615.99us  svm_inference_thread_parallel_kernel(float const *, float const *, float const *, float const *, float*, int, int, int, float)
+      API calls:   79.92%  398.41ms         5  79.682ms  14.000us  397.67ms  cudaMalloc
+                   19.35%  96.442ms         5  19.288ms  11.151us  53.236ms  cudaMemcpy
+                    0.25%  1.2661ms         1  1.2661ms  1.2661ms  1.2661ms  cudaLaunchKernel
+                    0.23%  1.1400ms         5  228.00us  15.947us  405.76us  cudaFree
+                    0.12%  608.17us         1  608.17us  608.17us  608.17us  cudaDeviceSynchronize
+                    0.10%  520.79us       114  4.5680us     429ns  209.53us  cuDeviceGetAttribute
+                    0.01%  47.333us         1  47.333us  47.333us  47.333us  cuDeviceGetName
+                    0.01%  39.731us         1  39.731us  39.731us  39.731us  cuDeviceGetPCIBusId
+                    0.00%  3.5800us         3  1.1930us     537ns  2.0850us  cuDeviceGetCount
+                    0.00%  2.0800us         2  1.0400us     506ns  1.5740us  cuDeviceGet
+                    0.00%  1.3080us         1  1.3080us  1.3080us  1.3080us  cuDeviceTotalMem
+                    0.00%     951ns         1     951ns     951ns     951ns  cuModuleGetLoadingMode
+                    0.00%     750ns         1     750ns     750ns     750ns  cuDeviceGetUuid
+
+==== NVPROF METRICS ======3177730== NVPROF is profiling process 3177730, command: ./svm2
+==3177730== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+Batched CPU elapsed (sec): 6.00117
+GPU THREAD elapsed (sec): 0.392542
+All outputs match across all implementations!
+==3177730== Profiling application: ./svm2
+==3177730== Profiling result:
+==3177730== Metric result:
+Invocations                               Metric Name                            Metric Description         Min         Max         Avg
+Device "NVIDIA TITAN V (0)"
+    Kernel: svm_inference_thread_parallel_kernel(float const *, float const *, float const *, float const *, float*, int, int, int, float)
+          1                        achieved_occupancy                            Achieved Occupancy    0.954382    0.954382    0.954382
+          1                                       ipc                                  Executed IPC    3.137440    3.137440    3.137440
+          1                             sm_efficiency                       Multiprocessor Activity      99.19%      99.19%      99.19%
+          1                      dram_read_throughput                 Device Memory Read Throughput  122.31GB/s  122.31GB/s  122.31GB/s
+          1                   stall_memory_dependency            Issue Stall Reasons (Data Request)      16.17%      16.17%      16.17%
+          1                             flop_count_sp   Floating Point Operations(Single Precision)  1130000000  1130000000  1130000000
+          1                          dram_utilization                     Device Memory Utilization     Mid (4)     Mid (4)     Mid (4)
+          1                            gld_efficiency                 Global Memory Load Efficiency      45.93%      45.93%      45.93%
+
